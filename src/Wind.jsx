@@ -27,7 +27,7 @@ export default function WindChart({ city }) {
         if (error.response && error.response.status === 404) {
           setError("City not found. Please try another city.");
         } else {
-          setError("Failed to fetch weather data. Please try again later.");
+          setError("City not found. Please try another city.");
         }
         setWindSpeed(null);
       }
