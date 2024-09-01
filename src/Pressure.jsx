@@ -42,10 +42,10 @@ export default function PressureGauge({ city }) {
   return (
     <div
       style={{
-        width: 150,
-        height: 150,
+        width: "10.3vw",
+        height: "10.3vw",
         paddingTop: "22px",
-        marginLeft: "47px",
+        marginLeft: "3.5vw",
       }}
     >
       {error ? (

@@ -108,8 +108,8 @@ export default function WeatherChart({ city }) {
       ) : (
         <Line
           data={chartData}
-          width={700}
-          height={300}
+          width="5vw"
+          height="2vw"
           options={{
             scales: {
               x: {

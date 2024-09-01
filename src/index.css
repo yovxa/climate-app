@@ -16,11 +16,6 @@ body {
   border-radius: 10px;
 }
 
-
-.nav {
-  display: block;
-}
-
 .div {
   display: flex;
   align-items: center;
@@ -28,20 +23,11 @@ body {
 }
 
 .p {
-  font-size: 25px;
+  font-size: 1.6vw;
   text-align: center;
   font-weight: bold;
 }
 
-.li {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  border-bottom: 1;
-  border-color: #918f8f81;
-  border-bottom-style: solid;
-}
 
 .txt {
   font-size: x-large;

@@ -22,18 +22,25 @@ export default function NavBar2() {
           alt="icon"
           style={{ height: "30px", width: "30px", padding: "10px" }}
         />
-        <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: "bold" }}>
+        <Typography
+          variant="h6"
+          sx={{ flexGrow: 1, fontWeight: "bold", fontSize: "1.5vw" }}
+        >
           Climate
         </Typography>
 
         <Box sx={{ flexGrow: 0, display: "flex" }}>
-          <Button href="/" color="inherit" sx={{ fontWeight: "bold" }}>
+          <Button
+            href="/"
+            color="inherit"
+            sx={{ fontWeight: "bold", fontSize: "1.1vw" }}
+          >
             Dashboard
           </Button>
           <Button
             href="/WeatherMap"
             color="inherit"
-            sx={{ fontWeight: "bold" }}
+            sx={{ fontWeight: "bold", fontSize: "1.1vw" }}
           >
             Weather Map
           </Button>

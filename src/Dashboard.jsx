@@ -35,6 +35,7 @@ const Paperr = styled(Paper)(() => ({
 
 const Title = styled(Typography)(() => ({
   fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+  fontSize: "1.5vw",
 }));
 
 function capitalizeFirstLetter(string) {
@@ -104,7 +105,7 @@ export default function Dashboard() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={4} md={4}>
           <Paperr>
             <Title
               variant="h5"

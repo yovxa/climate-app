@@ -43,14 +43,14 @@ export default function WindChart({ city }) {
           <p>{error}</p>
         ) : windSpeed !== null ? (
           <Gauge
-            width={170}
-            height={170}
             value={windSpeed}
             startAngle={-90}
             endAngle={90}
             sx={() => ({
-              fontSize: "20px",
+              fontSize: "2vw",
               fontWeight: "bold",
+              height: "12vw",
+              width: "12vw",
               [`& .${gaugeClasses.valueArc}`]: {
                 fill: "#023e8a",
               },

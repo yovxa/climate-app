@@ -42,7 +42,7 @@ export default function CurrTemperature({ city }) {
 
   return (
     <div className="div" style={{ padding: "20px" }}>
-      <WbSunny style={{ fontSize: "50px", color: "#ff6700" }} />
+      <WbSunny style={{ fontSize: "4vw", color: "#ff6700" }} />
       {temperature !== null && <p className="p">{temperature} °C</p>}
     </div>
   );

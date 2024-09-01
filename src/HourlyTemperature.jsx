@@ -11,9 +11,11 @@ import {
   Thunderstorm,
 } from "@mui/icons-material";
 
-const Btn = styled(Button)(() => ({
-  width: "140px",
-  height: "40px",
+const Btn = styled(Button)((theme) => ({
+  width: "auto",
+  height: "3vw",
+  fontSize: "1vw",
+  fontWeight: "bold",
   background: "linear-gradient(to top, inherit)",
   color: "#22223B",
   borderRadius: "15px",
@@ -101,7 +103,7 @@ export default function TodayTemperature({ city }) {
   const displayedWeather = filterWeatherData();
 
   const getIcon = (description) => {
-    const iconProps = { sx: { fontSize: 50, color: "#000" } };
+    const iconProps = { sx: { fontSize: "4vw", color: "#000" } };
     switch (true) {
       case /clear/i.test(description):
         return (
@@ -177,15 +179,15 @@ export default function TodayTemperature({ city }) {
                   {getIcon(hour.weather[0].description)}
                 </IconContainer>
                 <div>
-                  <strong style={{ fontSize: "25px" }}>
+                  <strong style={{ fontSize: "1.5vw" }}>
                     {dayjs(hour.dt_txt).format("HH:mm")}
                   </strong>
                   <br />
-                  <span style={{ fontSize: "20px" }}>
+                  <span style={{ fontSize: "1.2vw" }}>
                     {hour.weather[0].description}
                   </span>
                   <br />
-                  <span style={{ fontSize: "20px" }}>
+                  <span style={{ fontSize: "1.2vw" }}>
                     Temp: {hour.main.temp}°C
                   </span>
                 </div>
