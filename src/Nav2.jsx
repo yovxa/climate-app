@@ -12,7 +12,11 @@ const Nav = styled(AppBar)(() => ({
   boxShadow:
     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
 }));
-
+const Btn = styled(Button)(() => ({
+  fontWeight: "bold",
+  fontSize: "1.1vw",
+  fontFamily: "Trebuchet MS",
+}));
 export default function NavBar2() {
   return (
     <Nav position="static">
@@ -20,30 +24,27 @@ export default function NavBar2() {
         <img
           src="climate-change.png"
           alt="icon"
-          style={{ height: "30px", width: "30px", padding: "10px" }}
+          style={{ height: "2vw", width: "2vw", padding: "10px" }}
         />
         <Typography
           variant="h6"
-          sx={{ flexGrow: 1, fontWeight: "bold", fontSize: "1.5vw" }}
+          sx={{
+            flexGrow: 1,
+            fontWeight: "bold",
+            fontSize: "1.5vw",
+            fontFamily: "Trebuchet MS",
+          }}
         >
           Climate
         </Typography>
 
         <Box sx={{ flexGrow: 0, display: "flex" }}>
-          <Button
-            href="/"
-            color="inherit"
-            sx={{ fontWeight: "bold", fontSize: "1.1vw" }}
-          >
+          <Btn href="/" color="inherit">
             Dashboard
-          </Button>
-          <Button
-            href="/WeatherMap"
-            color="inherit"
-            sx={{ fontWeight: "bold", fontSize: "1.1vw" }}
-          >
+          </Btn>
+          <Btn href="/WeatherMap" color="inherit">
             Weather Map
-          </Button>
+          </Btn>
         </Box>
       </Toolbar>
     </Nav>

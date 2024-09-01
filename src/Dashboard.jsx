@@ -34,8 +34,10 @@ const Paperr = styled(Paper)(() => ({
 }));
 
 const Title = styled(Typography)(() => ({
-  fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+  fontFamily: "Trebuchet MS",
   fontSize: "1.5vw",
+  textAlign: "center",
+  fontWeight: "bold",
 }));
 
 function capitalizeFirstLetter(string) {
@@ -61,45 +63,25 @@ export default function Dashboard() {
           <Grid container spacing={4}>
             <Grid item xs={4} sm={4} md={4}>
               <Papers>
-                <Title
-                  variant="h5"
-                  sx={{ textAlign: "center", fontWeight: "bold" }}
-                >
-                  Current Temperature
-                </Title>
+                <Title variant="h5">Current Temperature</Title>
                 <CurrTemperature city={capitalizedCity} />
               </Papers>
             </Grid>
             <Grid item xs={4} sm={4} md={4}>
               <Papers>
-                <Title
-                  variant="h5"
-                  sx={{ textAlign: "center", fontWeight: "bold" }}
-                >
-                  Pressure
-                </Title>
+                <Title variant="h5">Pressure</Title>
                 <Pressure city={capitalizedCity} />
               </Papers>
             </Grid>
             <Grid item xs={4} sm={4}>
               <Papers>
-                <Title
-                  variant="h5"
-                  sx={{ textAlign: "center", fontWeight: "bold" }}
-                >
-                  Wind
-                </Title>
+                <Title variant="h5">Wind</Title>
                 <Wind city={capitalizedCity} />
               </Papers>
             </Grid>
             <Grid item xs={12}>
               <Papers>
-                <Title
-                  variant="h5"
-                  sx={{ textAlign: "center", fontWeight: "bold" }}
-                >
-                  Temperature Data
-                </Title>
+                <Title variant="h5">Temperature Data</Title>
                 <TemperatureData city={capitalizedCity} />
               </Papers>
             </Grid>
@@ -107,12 +89,7 @@ export default function Dashboard() {
         </Grid>
         <Grid item xs={4} md={4}>
           <Paperr>
-            <Title
-              variant="h5"
-              sx={{ textAlign: "center", fontWeight: "bold" }}
-            >
-              Weather in {capitalizedCity}
-            </Title>
+            <Title variant="h5">Weather in {capitalizedCity}</Title>
             <HourlyTemperature city={capitalizedCity} />
           </Paperr>
         </Grid>

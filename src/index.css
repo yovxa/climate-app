@@ -1,13 +1,13 @@
 body {
   background-color: #87bfff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Trebuchet MS";
 }
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px #87bfff;
   border-radius: 10px;
 }
 

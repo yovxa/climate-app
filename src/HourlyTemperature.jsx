@@ -16,6 +16,7 @@ const Btn = styled(Button)((theme) => ({
   height: "3vw",
   fontSize: "1vw",
   fontWeight: "bold",
+  fontFamily: "Trebuchet MS",
   background: "linear-gradient(to top, inherit)",
   color: "#22223B",
   borderRadius: "15px",

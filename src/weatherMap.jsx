@@ -11,7 +11,7 @@ export default function Temperature() {
     <>
       <Nav2 />
 
-      <div style={{ height: "600px", paddingTop: "5px" }}>
+      <div style={{ height: "39vw", paddingTop: "5px" }}>
         <MapContainer
           center={[31.279862, 37.1297454]}
           zoom={5}
