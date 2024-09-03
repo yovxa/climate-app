@@ -1,6 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Gauge, gaugeClasses } from "@mui/x-charts";
+import { styled } from "@mui/material";
+
+const WindSpeed = styled(Gauge)(() => ({
+  fontSize: "30px",
+  fontWeight: "bold",
+  height: "175px",
+  width: "200px",
+  [`& .${gaugeClasses.valueArc}`]: {
+    fill: "#023e8a",
+  },
+  [`& .${gaugeClasses.referenceArc}`]: {
+    fill: "#caf0f8",
+  },
+}));
 
 export default function WindChart({ city }) {
   const [windSpeed, setWindSpeed] = useState(null);
@@ -42,23 +56,7 @@ export default function WindChart({ city }) {
         {error ? (
           <p>{error}</p>
         ) : windSpeed !== null ? (
-          <Gauge
-            value={windSpeed}
-            startAngle={-90}
-            endAngle={90}
-            sx={() => ({
-              fontSize: "2vw",
-              fontWeight: "bold",
-              height: "12vw",
-              width: "12vw",
-              [`& .${gaugeClasses.valueArc}`]: {
-                fill: "#023e8a",
-              },
-              [`& .${gaugeClasses.referenceArc}`]: {
-                fill: "#caf0f8",
-              },
-            })}
-          />
+          <WindSpeed value={windSpeed} startAngle={-90} endAngle={90} />
         ) : (
           <p>Loading...</p>
         )}

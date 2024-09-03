@@ -13,8 +13,8 @@ import {
 
 const Btn = styled(Button)((theme) => ({
   width: "auto",
-  height: "3vw",
-  fontSize: "1vw",
+  height: "40px",
+  fontSize: "15px",
   fontWeight: "bold",
   fontFamily: "Trebuchet MS",
   background: "linear-gradient(to top, inherit)",
@@ -26,6 +26,9 @@ const Btn = styled(Button)((theme) => ({
   cursor: "pointer",
   position: "relative",
   overflow: "hidden",
+  "@media (max-width: 600px)": {
+    fontSize: "14px",
+  },
 
   "&:hover": {
     transform: "translateY(-2px)",
@@ -104,7 +107,7 @@ export default function TodayTemperature({ city }) {
   const displayedWeather = filterWeatherData();
 
   const getIcon = (description) => {
-    const iconProps = { sx: { fontSize: "4vw", color: "#000" } };
+    const iconProps = { sx: { fontSize: "40px", color: "#000" } };
     switch (true) {
       case /clear/i.test(description):
         return (
@@ -180,17 +183,13 @@ export default function TodayTemperature({ city }) {
                   {getIcon(hour.weather[0].description)}
                 </IconContainer>
                 <div>
-                  <strong style={{ fontSize: "1.5vw" }}>
+                  <strong className="temptxt">
                     {dayjs(hour.dt_txt).format("HH:mm")}
                   </strong>
                   <br />
-                  <span style={{ fontSize: "1.2vw" }}>
-                    {hour.weather[0].description}
-                  </span>
+                  <span className="HTtxt">{hour.weather[0].description}</span>
                   <br />
-                  <span style={{ fontSize: "1.2vw" }}>
-                    Temp: {hour.main.temp}°C
-                  </span>
+                  <span className="HTtxt">Temp: {hour.main.temp}°C</span>
                 </div>
               </ListItem>
             ))}

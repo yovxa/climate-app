@@ -40,14 +40,7 @@ export default function PressureGauge({ city }) {
   }, [city]);
 
   return (
-    <div
-      style={{
-        width: "10.3vw",
-        height: "10.3vw",
-        paddingTop: "22px",
-        marginLeft: "3.5vw",
-      }}
-    >
+    <div className="pressureDiv">
       {error ? (
         <p>{error}</p>
       ) : currentPressure !== null ? (

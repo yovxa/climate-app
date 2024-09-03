@@ -15,6 +15,16 @@ const Nav = styled(AppBar)(() => ({
     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
 }));
 
+const Logo = styled(Typography)(() => ({
+  flexGrow: 0.5,
+  fontWeight: "bold",
+  fontSize: "25px",
+  fontFamily: "Trebuchet MS",
+  "@media (max-width: 600px)": {
+    fontSize: "15px",
+  },
+}));
+
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -59,11 +69,14 @@ const Btn = styled(Button)(() => ({
   borderRadius: "15px",
   border: "1 solid",
   color: "white",
-  fontSize: "1vw",
+  fontSize: "15px",
   fontFamily: "Trebuchet MS",
 
   backgroundColor: "#023e8a",
   boxShadow: " transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px",
+  "@media (max-width: 600px)": {
+    fontSize: "10px",
+  },
 
   "&:hover": {
     boxshadow:
@@ -82,8 +95,11 @@ const Btn = styled(Button)(() => ({
 
 const Btn2 = styled(Button)(() => ({
   fontWeight: "bold",
-  fontSize: "1.1vw",
+  fontSize: "15px",
   fontFamily: "Trebuchet MS",
+  "@media (max-width: 600px)": {
+    fontSize: "10px",
+  },
 }));
 
 export default function NavBar({ onCityChange }) {
@@ -106,14 +122,13 @@ export default function NavBar({ onCityChange }) {
         <img
           src="climate-change.png"
           alt="icon"
-          style={{ height: "2vw", width: "2vw", padding: "10px" }}
+          style={{
+            height: "30px",
+            width: "30px",
+            padding: "10px",
+          }}
         />
-        <Typography
-          variant="h6"
-          style={{ flexGrow: 0.5, fontWeight: "bold", fontSize: "1.5vw" , fontFamily:"Trebuchet MS"}}
-        >
-          Climate
-        </Typography>
+        <Logo variant="h6">Climate</Logo>
         <Search>
           <SearchIconWrapper>
             <SearchIcon />

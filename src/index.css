@@ -23,7 +23,7 @@ body {
 }
 
 .p {
-  font-size: 1.6vw;
+  font-size: 25px;
   text-align: center;
   font-weight: bold;
 }
@@ -34,4 +34,44 @@ body {
 
 .txt2 {
   font-size: larger;
+}
+
+.pressureDiv {
+  width: 150px;
+  height: 150px;
+  padding-top: 22px;
+  margin-left: 55px;
+}
+
+.temptxt {
+  font-size: 25px;
+}
+
+.HTtxt {
+  font-size: 20px;
+}
+.Mapdiv {
+  position: relative;
+  height: 685px;
+  margin-top: -70px;
+  z-index: 1;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .p {
+    font-size: 30px;
+  }
+  .chart {
+    height: 90;
+    width: 30;
+  }
+  .pressureDiv {
+    height: 170px;
+    width: 170px;
+    margin-left: 95px;
+  }
+  .Mapdiv {
+    height: 600px;
+  }
 }

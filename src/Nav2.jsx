@@ -9,42 +9,52 @@ const Nav = styled(AppBar)(() => ({
   backgroundColor: "#ADD7F6",
   color: "#22223B",
   borderRadius: "10px",
+  zindex: "2",
+  position: "relative",
   boxShadow:
     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
 }));
-const Btn = styled(Button)(() => ({
+const Logo = styled(Typography)(() => ({
+  flexGrow: 1,
   fontWeight: "bold",
-  fontSize: "1.1vw",
+  fontSize: "25px",
   fontFamily: "Trebuchet MS",
+  "@media (max-width: 600px)": {
+    fontSize: "15px",
+  },
 }));
+
+const Btn2 = styled(Button)(() => ({
+  fontWeight: "bold",
+  fontSize: "15px",
+  fontFamily: "Trebuchet MS",
+  "@media (max-width: 600px)": {
+    fontSize: "10px",
+  },
+}));
+
 export default function NavBar2() {
   return (
-    <Nav position="static">
+    <Nav>
       <Toolbar>
         <img
           src="climate-change.png"
           alt="icon"
-          style={{ height: "2vw", width: "2vw", padding: "10px" }}
-        />
-        <Typography
-          variant="h6"
-          sx={{
-            flexGrow: 1,
-            fontWeight: "bold",
-            fontSize: "1.5vw",
-            fontFamily: "Trebuchet MS",
+          style={{
+            height: "30px",
+            width: "30px",
+            padding: "10px",
           }}
-        >
-          Climate
-        </Typography>
+        />
+        <Logo variant="h6">Climate</Logo>
 
         <Box sx={{ flexGrow: 0, display: "flex" }}>
-          <Btn href="/" color="inherit">
+          <Btn2 href="/" color="inherit">
             Dashboard
-          </Btn>
-          <Btn href="/WeatherMap" color="inherit">
+          </Btn2>
+          <Btn2 href="/WeatherMap" color="inherit">
             Weather Map
-          </Btn>
+          </Btn2>
         </Box>
       </Toolbar>
     </Nav>

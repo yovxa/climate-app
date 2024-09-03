@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { WbSunny } from "@mui/icons-material";
+import { styled } from "@mui/material";
 
 const apiKey = import.meta.env.VITE_API_WEATHER_API_KEY;
+
+const Sun = styled(WbSunny)(() => ({
+  fontSize: "50px",
+  color: "#ff6700",
+  "@media (max-width: 600px)": {
+    fontSize: "60px",
+  },
+}));
 
 export default function CurrTemperature({ city }) {
   const [temperature, setTemperature] = useState(null);
@@ -42,7 +51,7 @@ export default function CurrTemperature({ city }) {
 
   return (
     <div className="div" style={{ padding: "20px" }}>
-      <WbSunny style={{ fontSize: "4vw", color: "#ff6700" }} />
+      <Sun />
       {temperature !== null && <p className="p">{temperature} °C</p>}
     </div>
   );
