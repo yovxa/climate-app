@@ -1,5 +1,5 @@
 import React from "react";
-import Nav2 from "./Nav2";
+import Nav from "./Nav";
 import { MapContainer, TileLayer, LayersControl } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -9,7 +9,7 @@ const apiKey = import.meta.env.VITE_API_WEATHER_API_KEY;
 export default function Temperature() {
   return (
     <>
-      <Nav2 />
+      <Nav />
 
       <div className="Mapdiv">
         <MapContainer

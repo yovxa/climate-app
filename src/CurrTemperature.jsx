@@ -9,7 +9,7 @@ const Sun = styled(WbSunny)(() => ({
   fontSize: "50px",
   color: "#ff6700",
   "@media (max-width: 600px)": {
-    fontSize: "60px",
+    fontSize: "30px",
   },
 }));
 

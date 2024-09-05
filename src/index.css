@@ -40,7 +40,7 @@ body {
   width: 150px;
   height: 150px;
   padding-top: 22px;
-  margin-left: 55px;
+  margin-left: 50px;
 }
 
 .temptxt {
@@ -57,21 +57,33 @@ body {
   z-index: 1;
 }
 
+.searchdiv {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
 
 @media only screen and (max-width: 600px) {
   .p {
-    font-size: 30px;
+    font-size: 15px;
   }
   .chart {
     height: 90;
     width: 30;
   }
   .pressureDiv {
-    height: 170px;
-    width: 170px;
-    margin-left: 95px;
+    padding-top: 17px;
+    height: 100px;
+    width: 100px;
+    margin-left: 25px;
   }
   .Mapdiv {
     height: 600px;
+  }
+  .HTtxt {
+    font-size: 15px;
+  }
+  .temptxt {
+    font-size: 20px;
   }
 }

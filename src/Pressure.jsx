@@ -50,7 +50,7 @@ export default function PressureGauge({ city }) {
           maxValue={1050}
           text={`${currentPressure} hPa`}
           styles={buildStyles({
-            textSize: "16px",
+            textSize: "15px",
             pathColor: "#023e8a",
             textColor: "Black",
             trailColor: "#caf0f8",
