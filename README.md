@@ -23,3 +23,6 @@ A clean, responsive web application that displays climate / weather data, built 
 - Responsive layout for desktop & mobile
 
 - Optimised for fast loading and smooth user experience
+
+# Live Demo
+[DEMO](https://climate-tracker-6zy.pages.dev/)
